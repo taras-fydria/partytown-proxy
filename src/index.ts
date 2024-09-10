@@ -3,9 +3,8 @@ import { Hono } from "hono";
 import router from "./router";
 import errorHandler from "./errorHandler";
 import { cors } from "hono/cors";
-import dotenv from 'dotenv'
-dotenv.config()
-
+import { config } from "dotenv";
+config();
 
 const app = new Hono();
 
