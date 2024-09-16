@@ -27,3 +27,5 @@ package-lock.json
 
 # misc
 .DS_Store
+localhost-cert.pem
+localhost-privkey.pem

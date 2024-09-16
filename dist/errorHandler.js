@@ -1,9 +1,11 @@
-import { HTTPException } from "hono/http-exception";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const http_exception_1 = require("hono/http-exception");
 const errorHandler = (err, _) => {
-    if (err instanceof HTTPException) {
+    if (err instanceof http_exception_1.HTTPException) {
         return err.getResponse();
     }
     const response = new Response(err.message, { status: 500 });
     return response;
 };
-export default errorHandler;
+exports.default = errorHandler;
